@@ -5,6 +5,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // Compute_Cn1n2
 NumericMatrix Compute_Cn1n2(NumericMatrix x);
 RcppExport SEXP _MuChPoint_Compute_Cn1n2(SEXP xSEXP) {
