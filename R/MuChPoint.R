@@ -93,7 +93,7 @@ MuChPoint=function(Y,Lmax=nrow(Y)/2,N=NULL,cores=1,verbose=TRUE){
         Lmax=NULL
       }
     }else{
-      if ((floor(Lmax)!=Lmax)||(Lmax<1)||(Lmax>=n)){
+      if ((floor(Lmax)!=Lmax)|(Lmax<1)|(Lmax>=n)){
         if(is.null(N)){
           stop("\n Lmax must be an integer between 1 and n")
         }else{
@@ -148,7 +148,7 @@ MuChPoint=function(Y,Lmax=nrow(Y)/2,N=NULL,cores=1,verbose=TRUE){
         warning("\n N has been sorted by increasing order")
       }
     }
-    if ((N[1]<1)||(N[L]>=n)){
+    if ((N[1]<1)|(N[L]>=n)){
       stop("N must be an increasing positive integer vector between 1 and n-1")
     }
 
