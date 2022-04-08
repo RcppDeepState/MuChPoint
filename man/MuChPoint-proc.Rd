@@ -32,7 +32,7 @@ Y=matrix(rnorm(150^2,0,5),150)+mu+t(mu)
 Y=as.matrix(Matrix::forceSymmetric(Y))
 res=MuChPoint(Y)
 plot(res,Y,L=5,shiny=FALSE)
-plot(res,Y,L=1:5,shiny=FALSE,ask=FALSE)
+plot(res,Y,L=1:10,shiny=FALSE,ask=FALSE)
 
 
 }
