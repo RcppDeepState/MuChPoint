@@ -43,7 +43,7 @@ setMethod("print", "MuChPoint", definition =
               cat("- max number of change-points :", length(methods::slot(x,"N")),"\n")
               if (!is.null(N)){
                 if (is.numeric(N)){
-                  if ((N<1)||(N>nrow(methods::slot(x,"bt")))){
+                  if ((N<1)|(N>nrow(methods::slot(x,"bt")))){
                     warning("N must be a positive integer less than ",nrow(methods::slot(x,"bt")))
                   }else{
                     cat("- position of change-points for N equal to",as.character(N),":", methods::slot(x,"bt")[N,1:N], "\n")
@@ -153,7 +153,7 @@ setMethod(
              the option Lmax instead of the option N")
       }
       bt=x@bt
-      if ((any(floor(L)!=L))||(any((L<1)||(L>nrow(x@bt))))){
+      if ((any(floor(L)!=L))|(any((L<1)|(L>nrow(x@bt))))){
         stop("L must be a positive ingeter vector between 1 and Lmax")
       }
       }else{
